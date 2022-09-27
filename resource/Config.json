@@ -1,0 +1,55 @@
+{
+	"DEFAULT": {
+		"APPLICATION_NAME": "Wicon-L",
+		"RUN_MODE": "SERVICE",
+		"SERVER_URL": "tcp.wim-x.kr",
+		"SERVER_PORT": 50300,
+		"SENSOR": "I2C",
+		"WICON_ID": "WF-001720",
+		"PERIOD_S": 1
+	},
+	"DEVELOPMENT": {
+		"BASE_DIR": "D:\\\uc6b8\ub784\ub77c\ub7a9\\003. Wicon-L-Py\\Wicon-L-Py",
+		"LOGS_DIR": "D:\\\uc6b8\ub784\ub77c\ub7a9\\003. Wicon-L-Py\\Wicon-L-Py\\logs\\",
+		"BACKUP_DIR": "D:\\\uc6b8\ub784\ub77c\ub7a9\\003. Wicon-L-Py\\Wicon-L-Py\\backup\\"
+	},
+	"SERVICE": {
+		"BASE_DIR": "/home/pi/Wicon-L-Py/",
+		"LOGS_DIR": "/home/pi/Wicon-L-Py/logs/",
+		"BACKUP_DIR": "/home/pi/Wicon-L-Py/backup/"
+	},
+	"DIGITAL": {
+		"DEBOUNCING": true,
+		"DEBOUNCE_TIME_MS": 20,
+		"MODE": "DIGITAL",
+		"COUNTER": {
+			"SENSOR_COUNT": 1,
+			"MAX_COUNT": 65535
+		},
+		"TIMING": {
+			"OFFSET_TIME": 0
+		},
+		"DIGITAL": {
+			"EDGE": "RISING"
+		}
+	},
+	"I2C": {
+		"MODE": "DUST",
+		"IR_TEMP": {
+			"DATA_MODE": "MATCH",
+			"MATCH": "MAX",
+			"FIVE_POINT": [
+				101,
+				232,
+				356,
+				456,
+				608
+			]
+		},
+		"VIBRATION": "",
+		"DUST": {
+			"BUS_NO": "1",
+			"TIME": "5"
+		}
+	}
+}

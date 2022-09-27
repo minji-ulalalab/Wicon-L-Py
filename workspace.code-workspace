@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "SSH FS - rpi_zero_w",
+			"uri": "ssh://rpi_zero_w/"
+		}
+	],
+	"settings": {}
+}

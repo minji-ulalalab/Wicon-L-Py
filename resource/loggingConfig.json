@@ -1,0 +1,47 @@
+{
+	"version": 1,
+	"disable_existing_loggers": false,
+	"post_fix_format":"%Y%m%d%H.log",
+	
+	"formatters": {
+		"info01": {
+			"format": "%(asctime)s | %(levelname)s | %(message)s"
+		},
+		"info02": {
+			"format": "%(asctime)s | %(name)s | %(levelname)s | %(message)s"
+		},
+		"debug01": {
+			"format": "%(asctime)s | %(filename)s:%(lineno)d | %(name)s:%(levelname)s | %(message)s"
+		}
+	},
+
+	"handlers": {
+		"console": {
+			"class": "logging.StreamHandler",
+			"level": "INFO",
+			"formatter": "info02"
+		},
+		"file_debug": {
+			"class": "logging.handlers.TimedRotatingFileHandler",
+			"level": "DEBUG",
+			"formatter": "debug01",
+			"when":"midnight",
+			"backupCount":14,
+			"filename": "debug.log"
+		},
+		"file_error": {
+			"class": "logging.handlers.TimedRotatingFileHandler",
+			"level": "ERROR",
+			"formatter": "debug01",
+			"when":"midnight",
+			"backupCount":14,
+			"filename": "error.log"
+		}
+	},
+
+	"root": {
+		"level": "DEBUG",
+		"handlers": ["console", "file_debug", "file_error"],
+		"propagate": true
+	}
+}
